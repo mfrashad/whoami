@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var uaparser = require('ua-parser-js');
+var uaParser = require('../functions/ua-parser');
 
 router.get('/',function(req,res){
-    var ua = uaparser(req.headers['user-agent']);
-    ua.ip = req.ip;
+    var ua = uaParser(req);
     res.send(ua);
 });
 
