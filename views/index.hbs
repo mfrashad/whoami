@@ -1,10 +1,53 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-<p>To get the JSON file of the parsed User-Agent Header go to</p>
-<p>{{url}}</p>
-<br>
-<h3>Ip : {{userAgent.ip}}</h3>
-<h3>Browser : {{userAgent.browser.name}}</h3>
-<h3>OS : {{userAgent.os.name}}</h3>
-<h3>Languange : {{userAgent.language}}</h3>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="stylesheets/style.css"></script>
+<body>
+<div class="container center-align">
+    <div class="card red lighten-2 white-text z-depth-5">
+        <div class="card-content">
+            <span class="card-title"><h1>{{title}}</h1></span>
 
+            <div class="row">
+                <div class="col s2"></div>
+                <div class="col s8">
+                     <div class="card-panel hoverable red-text">
+                        <span class="card-title">Usage:</span>
+                        <p>To get the JSON file of the parsed User-Agent Header go to</p>
+                        <code>{{url}}</code>
+                    </div>
+                    <div class="card-panel hoverable red-text">
+                        <span class="card-title">Example Output:</span>
+                        <code>{
+                            "ua":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0",
+                            "browser":{"name":"Firefox","version":"58.0","major":"58"},
+                            "engine":{"name":"Gecko","version":"58.0"},
+                            "os":{"name":"Ubuntu"},
+                            "device":{},
+                            "cpu":{"architecture":"amd64"},
+                            "ip":"127.0.0.1",
+                            "language":"en-US"}
+                        </code>
+                    </div>
+                </div>
+                <div class="col s2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col s3"></div>
+                <div class="col s6">
+                    <div class="card-panel hoverable red-text white">
+                        <p>Ip : {{userAgent.ip}}</p>
+                        <p>Browser : {{userAgent.browser.name}}</p>
+                        <p>OS : {{userAgent.os.name}}</p>
+                        <p>Languange : {{userAgent.language}}</p>
+                    </div>
+                </div>
+                <div class="col s3"></div>
+            </div>
+        
+    </div>
+</div>
+</body>

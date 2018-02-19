@@ -1,9 +1,9 @@
-body {
-  padding: 50px;
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
+#content {
+  width:400px;
 }
 
-a {
-  color: #00B7FF;
+.container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
